@@ -1,0 +1,70 @@
+{% extends "./base.html" %} <!-- Se hereda toda la estructura del archivo base.html -->
+
+{% block title %} Formulario Empresas {% endblock %} <!-- Cambiar nombre de página Se reemplaza en base.html-->
+
+{% block body %}
+<!-- código del framework bootstrap Jinja2 mtor de plantillas- procesar datos-->
+<div class="row"> <!-- Clase fila en dos bloques 4x8 -->
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <h2>Gestión de Empresa</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/registrarEmpresa/" method="POST">{% csrf_token %} <!--El método POST se utiliza 
+                    para enviar información al servidor. A diferencia del GET envía información del formulario 
+                    que posteas en el cuerpo del mensaje HTTP. -->
+                    <div class="form-group">
+                        <input type="text" id="txtEmpresa" name="txtEmpresa" class="form-control" 
+                        placeholder="Empresa" maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtDirección" name="txtDirección" class="form-control" 
+                        placeholder="Dirección" maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtNit" name="txtNit" class="form-control" 
+                        placeholder="Nit" maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtTeléfono" name="txtTeléfono" class="form-control" 
+                        placeholder="Teléfono" maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button> <!-- Boton de tipo enviar -->  
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Listado de Empresas</h1>
+        <div class="table-responsive py-2"></div> <!-- Tabla para mostrar las empresas y su información -->
+            <table class="table table-striped"> <!-- Efecto una fila resaltada y otra no  -->
+                <thead>  <!-- Cabecero de la tabla  -->
+                    <tr>
+                        <th>#</th>
+                        <th>Empresa</th>
+                        <th>Dirección</th>
+                        <th>Nit</th>
+                        <th>Teléfono</th>
+                        <th colspan="2">Opciones</th> <!-- colspan para que ocupe dos columnas  -->
+                    </tr>
+                </thead>
+                <tbody> <!-- Aqui se muestra la iteración de todas las empresas en cada fila  -->
+                    {% for c in empresaslis %}
+                    <tr>
+                        <td>{{forloop.counter}} </td> <!-- genera un conteo  -->
+                        <td>{{c.empresa}} </td> <!-- se crean las celdas correspondientes  -->
+                        <td>{{c.direccion}} </td>
+                        <td>{{c.nit}} </td>
+                        <td>{{c.telefono}} </td>
+                        <!-- Creación de botones editar y eliminar por referencia de hypervinculo  -->
+                        <td><a href="edicionEmpresa/{{c.nit}}" class="btn btn-info">Editar</a></td>
+                        <td><a href="eliminarEmpresa/{{c.nit}}" class="btn btn-danger">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>    
+    </div>  
+</div>
+{% endblock %}
