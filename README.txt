@@ -4,10 +4,6 @@ CRUD completo con Python, Django y una base de datos SQLite3, usando el patrón 
 
 <br/>
 
-![](./preview1.JPG)
-<br/><br/>
-![](./preview2.JPG)
-
 # 🌍 Por si deseas contactarme 👨‍💻 :
 
 Se expone una vista de Inicio con un formulario que captura la siguiente información de una empresa:
