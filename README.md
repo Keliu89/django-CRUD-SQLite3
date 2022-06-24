@@ -4,7 +4,7 @@ CRUD completo con Python, Django y una base de datos SQLite3, usando el patrón 
 
 <br/>
 
-Descripción de la prueba:
+<h1>Descripción:</h1>
 Es necesario construir una aplicación que exponga una vista de Inicio con un formulario que capture
 la siguiente información de una empresa:
 1. Nombre de la empresa.
