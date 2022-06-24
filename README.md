@@ -8,12 +8,10 @@ CRUD completo con Python, Django y una base de datos SQLite3, usando el patrón 
 Es necesario construir una aplicación que exponga una vista de Inicio con un formulario que capture
 la siguiente información de una empresa:
   <ul>
-      <li>      
-1. Nombre de la empresa.
-2. Dirección.
-3. NIT.
-4. Teléfono.
-      </li>
+      <li>1. Nombre de la empresa.</li>
+      <li>2. Dirección.</li>
+      <li>3. NIT.</li>
+      <li>4. Teléfono.</li>
   </ul>
 
 Esta información debe ser guardada en una base de datos y posterior a ello, se debe crear una vista
