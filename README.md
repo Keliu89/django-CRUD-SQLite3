@@ -15,6 +15,6 @@ Se contruye una aplicación que expone una vista de Inicio con un formulario que
 
 Esta información es guardada en una base de datos y posterior a ello, se crea una vista en la cuál se puede visualizar la información registrada para su edición o eliminación de la base de datos. 
 
-#Por si deseas contactarme:
+# 🌍 Por si deseas contactarme:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Kevin_Requena-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010)](https://www.linkedin.com/in/kevin-requena-9aa160241)
