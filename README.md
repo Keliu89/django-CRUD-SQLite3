@@ -1,9 +1,7 @@
 # Django-CRUD-SQLite3
 
 CRUD completo con Python, Django y una base de datos SQLite3, usando el patrón de arquitectura MTV (Modelo - Plantilla - Vista), el ORM de Django, el framework CSS Bootstrap y control de eventos con JavaScript.
-
 <br/>
-
 <h3>Descripción:</h3>
 Se contruye una aplicación que expone una vista de Inicio con un formulario que captura la siguiente información de una empresa:
   <ul>
