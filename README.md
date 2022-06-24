@@ -14,6 +14,7 @@ la siguiente información de una empresa:
 3. NIT.
 4. Teléfono.
       </li>
+  </ul>
 
 Esta información debe ser guardada en una base de datos y posterior a ello, se debe crear una vista
 en la cuál se pueda visualizar la información registrada para su edición o eliminación de la base de
